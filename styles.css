@@ -1,0 +1,89 @@
+/* General Page Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 2rem;
+  background: rgba(0,0,0,0.3);
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+section {
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* --- Part 1: CSS Animations --- */
+
+/* Button with hover transition + pulse animation */
+.pulse-btn {
+  padding: 1rem 2rem;
+  background: #ff9800;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.pulse-btn:hover {
+  transform: scale(1.1);
+  background: #ff5722;
+}
+
+/* Continuous fade animation */
+.fade-box {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #673ab7;
+  border-radius: 8px;
+  animation: fadePulse 3s infinite;
+}
+
+@keyframes fadePulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+/* --- Part 3: CSS + JS Fusion --- */
+#magic-box {
+  width: 100px;
+  height: 100px;
+  margin: 2rem auto;
+  background: #00e676;
+  border-radius: 12px;
+  transition: transform 1s ease;
+}
+
+.animate {
+  animation: slideAndSpin 2s forwards;
+}
+
+@keyframes slideAndSpin {
+  0% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(150px) rotate(180deg); }
+  100% { transform: translateX(0) rotate(360deg); }
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(0,0,0,0.4);
+}
